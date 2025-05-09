@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view/intro/components/subtitle_text.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import '../../../view model/responsive.dart';
+import '../../../res/constants.dart';
 
 class CombineSubtitleText extends StatelessWidget {
   const CombineSubtitleText({super.key});
@@ -21,59 +22,28 @@ class CombineSubtitleText extends StatelessWidget {
           tablet: AnimatedSubtitleText(
               start: 40, end: 30, text: 'Flutter '),
         ),
-        (kIsWeb && Responsive.isLargeMobile(context)
-            ? const Responsive(
+        const Responsive(
           desktop: AnimatedSubtitleText(
               start: 30,
               end: 40,
               text: 'Developer ',
-              gradient: true),
+              gradient: false),
           largeMobile: AnimatedSubtitleText(
               start: 30,
               end: 25,
               text: 'Developer ',
-              gradient: true),
+              gradient: false),
           mobile: AnimatedSubtitleText(
               start: 25,
               end: 20,
               text: 'Developer ',
-              gradient: true),
+              gradient: false),
           tablet: AnimatedSubtitleText(
               start: 40,
               end: 30,
               text: 'Developer ',
-              gradient: true),
+              gradient: false),
         )
-            : ShaderMask(
-          shaderCallback: (bounds) {
-            return const LinearGradient(colors: [
-              Colors.pink,
-              Colors.blue,
-            ]).createShader(bounds);
-          },
-          child: const Responsive(
-            desktop: AnimatedSubtitleText(
-                start: 30,
-                end: 40,
-                text: 'Developer ',
-                gradient: false),
-            largeMobile: AnimatedSubtitleText(
-                start: 30,
-                end: 25,
-                text: 'Developer ',
-                gradient: false),
-            mobile: AnimatedSubtitleText(
-                start: 25,
-                end: 20,
-                text: 'Developer ',
-                gradient: true),
-            tablet: AnimatedSubtitleText(
-                start: 40,
-                end: 30,
-                text: 'Developer ',
-                gradient: false),
-          ),
-        ))
       ],
     );
   }

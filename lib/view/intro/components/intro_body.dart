@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/view/main/components/navigation_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 import 'animated_texts_componenets.dart';
@@ -60,7 +62,12 @@ class IntroBody extends StatelessWidget {
               const SizedBox(
                 height: defaultPadding * 2,
               ),
-              const DownloadButton(),
+              NavigationTextButton(
+                 onTap: () {
+        launchUrl(Uri.parse('https://drive.google.com/file/d/1KlFa1fFVuN8B3EbHiurXMCrFBhPWena6/view?usp=sharing'));
+      },
+      text:"Download CV",
+              )
             ],
           ),
         ),

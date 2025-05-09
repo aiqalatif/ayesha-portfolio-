@@ -21,20 +21,21 @@ class MenuButton extends StatelessWidget {
                 width: defaultPadding * 2.0 * value,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.black,
+                    color: Color(0xffbad6b5),
                     boxShadow: [
                       BoxShadow(
-                          color: Colors.pinkAccent.withOpacity(.5),
+                          color: Color(0xffbad6b5),
                           offset: const Offset(1, 1)),
                       BoxShadow(
-                          color: Colors.blue.withOpacity(.5),
+                          color: Color(0xffbad6b5),
                           offset: const Offset(-1, -1)),
                     ]),
                 child:  Center(
                   child: ShaderMask(
                     shaderCallback: (bounds) {
                       return LinearGradient(
-                              colors: [Colors.pink, Colors.blue.shade900])
+                             
+                              colors: [Color(0xffbad6b5), primaryColor])
                           .createShader(bounds);
                     },
                     child: Icon(

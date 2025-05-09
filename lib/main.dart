@@ -85,12 +85,13 @@ class MyApp extends StatelessWidget {
               fontSize: 16,
               fontWeight: FontWeight.w600,
               letterSpacing: 0.5,
+              color: Colors.white,
             ),
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          fillColor: darkColor,
+          fillColor: Colors.white,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultBorderRadius),
             borderSide: BorderSide.none,
@@ -104,6 +105,7 @@ class MyApp extends StatelessWidget {
             borderSide: const BorderSide(color: accentColor2, width: 2),
           ),
           contentPadding: const EdgeInsets.all(defaultPadding),
+          hintStyle: TextStyle(color: Colors.grey[600]),
         ),
         iconTheme: const IconThemeData(
           color: accentColor2,

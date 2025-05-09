@@ -12,8 +12,8 @@ class AreaInfoText extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title,style: const TextStyle(color: Colors.white),),
-          Text(text),
+          Text(title, style: const TextStyle(color: headingColor)),
+          Text(text, style: const TextStyle(color: bodyTextColor)),
         ],
       ),
     );

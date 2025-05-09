@@ -33,6 +33,14 @@ class NavigationButtonList extends StatelessWidget {
           },
           text: 'Projects',
         ),
+        const SizedBox(width:defaultPadding ,),
+        NavigationTextButton(onTap:() {
+            controller.animateToPage(
+              2,
+              duration: defaultDuration,
+              curve: Curves.easeInOut,
+            );
+          },  text: "Certifications")
       ],
     );
   }

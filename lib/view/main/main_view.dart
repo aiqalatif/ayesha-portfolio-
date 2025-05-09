@@ -69,54 +69,65 @@ class _MainViewState extends State<MainView> with SingleTickerProviderStateMixin
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const CustomDrawer(),
-      body: Center(
-        child: Column(
-          children: [
-            kIsWeb && !Responsive.isLargeMobile(context)
-                ? const SizedBox(height: defaultPadding * 2)
-                : const SizedBox(height: defaultPadding / 2),
-            AnimatedOpacity(
-              duration: const Duration(milliseconds: 500),
-              opacity: _isVisible ? 1.0 : 0.0,
-              child: const SizedBox(
-                height: 80,
-                child: TopNavigationBar(),
-              ),
-            ),
-            if (Responsive.isLargeMobile(context))
-              AnimatedOpacity(
-                duration: const Duration(milliseconds: 500),
-                opacity: _isVisible ? 1.0 : 0.0,
-                child: const Row(
-                  children: [Spacer(), NavigationButtonList(), Spacer()],
+    return Theme(
+      data: Theme.of(context).copyWith(
+        iconTheme: const IconThemeData(
+          color: Color(0xFFBAD6B5),
+        ),
+      ),
+      child: Scaffold(
+        drawer: const CustomDrawer(),
+      
+        
+        body: Builder(
+          builder: (context) => Center(
+            child: Column(
+              children: [
+                kIsWeb && !Responsive.isLargeMobile(context)
+                    ? const SizedBox(height: defaultPadding * 2)
+                    : const SizedBox(height: defaultPadding / 2),
+                AnimatedOpacity(
+                  duration: const Duration(milliseconds: 500),
+                  opacity: _isVisible ? 1.0 : 0.0,
+                  child: const SizedBox(
+                    height: 80,
+                    child: TopNavigationBar(),
+                  ),
                 ),
-              ),
-            Expanded(
-              flex: 9,
-              child: PageView(
-                scrollDirection: Axis.vertical,
-                physics: const NeverScrollableScrollPhysics(),
-                controller: controller,
-                children: widget.pages.map((page) {
-                  return AnimatedBuilder(
-                    animation: _pageController,
-                    builder: (context, child) {
-                      return FadeTransition(
-                        opacity: _fadeAnimation,
-                        child: SlideTransition(
-                          position: _slideAnimation,
-                          child: child,
-                        ),
+                if (Responsive.isLargeMobile(context))
+                  AnimatedOpacity(
+                    duration: const Duration(milliseconds: 500),
+                    opacity: _isVisible ? 1.0 : 0.0,
+                    child: const Row(
+                      children: [Spacer(), NavigationButtonList(), Spacer()],
+                    ),
+                  ),
+                Expanded(
+                  flex: 2,
+                  child: PageView(
+                    scrollDirection: Axis.vertical,
+                    physics: const NeverScrollableScrollPhysics(),
+                    controller: controller,
+                    children: widget.pages.map((page) {
+                      return AnimatedBuilder(
+                        animation: _pageController,
+                        builder: (context, child) {
+                          return FadeTransition(
+                            opacity: _fadeAnimation,
+                            child: SlideTransition(
+                              position: _slideAnimation,
+                              child: child,
+                            ),
+                          );
+                        },
+                        child: page,
                       );
-                    },
-                    child: page,
-                  );
-                }).toList(),
-              ),
-            )
-          ],
+                    }).toList(),
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );

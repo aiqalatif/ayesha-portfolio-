@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
 // Primary Colors
-const primaryColor = Color(0xFF2D3436); // Deep charcoal
-const secondaryColor = Color(0xFF636E72); // Muted gray
-const darkColor = Color(0xFF1E1E1E); // Rich black
-const bodyTextColor = Color(0xFFDFE6E9); // Soft white
-const bgColor = Color(0xFF0A0A0A); // Pure black
+const primaryColor = Color(0xFF1B4D2E); // Darker forest green
+const secondaryColor = Color(0xFF2D5A3F); // Dark sage green
+const darkColor = Color(0xFF1B4D2E); // Darker forest green
+const bodyTextColor = Color(0xFF0A2E1B); // Very dark green for text
+const bgColor = Color(0xFF1B4D2E); // Light mint
 
 // Accent Colors
-const accentColor1 = Color(0xFF00B894); // Mint green
-const accentColor2 = Color(0xFF0984E3); // Ocean blue
-const accentColor3 = Color(0xFF6C5CE7); // Royal purple
+const accentColor1 = Color(0xFF3E7C4B); // Medium forest green
+const accentColor2 = Color(0xFF2D5A3F); // Dark sage green
+const accentColor3 = Color(0xFF1B4D2E); // Darker forest green
 
 // Gradient Colors
-const gradientStart = Color(0xFF2D3436);
-const gradientEnd = Color(0xFF000000);
+const gradientStart = Color(0xFF1B4D2E);
+const gradientEnd = Color(0xFF2D5A3F);
 
 // Text Colors
-const headingColor = Colors.white;
-const subheadingColor = Color(0xFFB2BEC3);
+const headingColor = Color(0xFF0A2E1B); // Very dark green for headings
+const subheadingColor = Color(0xFF1B4D2E); // Darker forest green for subheadings
 
 // Spacing
 const defaultPadding = 24.0;

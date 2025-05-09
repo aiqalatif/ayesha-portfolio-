@@ -8,7 +8,7 @@ class About extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color:  bgColor,
+        color: Color(0xffbad6b5),
         child: Column(
           children: [
             const Spacer(flex: 2,),
@@ -20,7 +20,8 @@ class About extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontWeight: FontWeight.w200,
-                  height: 1.5
+                  height: 1.5,
+                  color: primaryColor
               ),),
             const Spacer(flex: 2,),
           ],
