@@ -1,24 +1,6 @@
 # Responsive Flutter Portfolio Application & Website
 
-Thank you for visiting my portfolio website repository. This Flutter-based website serves as a showcase of my skills, projects, certifications, and ways to get in touch with me. The website is designed with a strong focus on responsiveness, ensuring that it looks and works flawlessly across a range of devices, from large desktop screens to compact Android devices.
 
-## Live Demo
-
-You can explore the live version of the website [Click to see live demo](https://hamad-anwar.github.io/Portfolio/#/).
-
-## Screenshots
-
-<img src="showcase.png">
-
-## Table of Contents
-
-- [Key Features](#key-features)
-- [Technologies and Packages Used](#technologies-and-packages-used)
-- [Getting Started](#getting-started)
-- [Usage Guide](#usage-guide)
-- [Contributions](#contributions)
-- [Contact Me](#contact-me)
-- [License](#license)
 
 ## Key Features
 
@@ -34,14 +16,7 @@ You can explore the live version of the website [Click to see live demo](https:/
 
 ## Technologies and Packages Used
 
-The portfolio website is built using Flutter, a powerful open-source UI software development toolkit. The following packages were utilized to enhance various aspects of the website:
 
-- [google_fonts](https://pub.dev/packages/google_fonts): Incorporates visually appealing and readable fonts from the Google Fonts library into the website.
-- [flutter_svg](https://pub.dev/packages/flutter_svg): Enables the seamless integration and rendering of SVG images, ensuring high-quality graphics across all devices.
-- [get](https://pub.dev/packages/get): Empowers efficient state management, simplifying the process of handling and updating UI components.
-- [photo_view](https://pub.dev/packages/photo_view): Provides an elegant and user-friendly image viewer for an enhanced visual experience.
-- [url_launcher](https://pub.dev/packages/url_launcher): Enables easy integration with external links, allowing visitors to quickly navigate to external resources.
-- [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter): Introduces a wide variety of customizable icons from the FontAwesome library, enhancing the visual representation of the website's features.
 
 ## Getting Started
 
@@ -72,8 +47,7 @@ I welcome contributions and suggestions from the community! If you come across a
 
 Your feedback and thoughts are highly valued. Feel free to connect with me through:
 
-- **Email:** rh676838@gmail.com
-- **LinkedIn:** [Hamad Anwar](https://www.linkedin.com/in/hamad-anwar)
+
 
 ## License
 
@@ -81,4 +55,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-### Designed and developed with ❤️ by [Hamad Anwar](https://www.linkedin.com/in/hamad-anwar/).
