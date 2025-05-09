@@ -18,16 +18,7 @@
 
 
 
-## Getting Started
 
-To explore and interact with the portfolio website on your local machine, follow these steps:
-
-1. **Clone the Repository:**
-   git clone https://github.com/Hamad-Anwar/Flutter-Responsive-Portfolio-WebApp.git
-2. **Install Dependencies:**
-   flutter pub get
-3. **Run Application**
-   flutter run
 
 ## Usage Guide
 
