@@ -25,7 +25,7 @@ class ProjectGrid extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
                 gradient: const LinearGradient(colors: [
                 const Color(0xFFBAD6B5),
-              const Color(0xFFBAD6B5),
+            
                 ]),
                 boxShadow:  [
                   BoxShadow(
