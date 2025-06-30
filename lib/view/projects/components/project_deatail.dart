@@ -8,29 +8,74 @@ import '../../../view model/responsive.dart';
 class ProjectDetail extends StatelessWidget {
   final int index;
   const ProjectDetail({super.key, required this.index});
+
   @override
   Widget build(BuildContext context) {
-    var size=MediaQuery.sizeOf(context);
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Align(alignment: Alignment.topCenter,child: Text(
-          projectList[index].name,
-          style: Theme.of(context)
-              .textTheme
-              .headlineSmall!
-              .copyWith(
-              color: headingColor,
-              fontWeight: FontWeight.bold),
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),),
-        Responsive.isMobile(context) ?  const SizedBox(height: defaultPadding/2,) : const SizedBox(height: defaultPadding,),
-        Text(projectList[index].description, style: const TextStyle(color: bodyTextColor, height: 1.5), maxLines: size.width>700 && size.width< 750 ? 3:  size.width<470  ? 2  : size.width>600 && size.width<700 ?     6:  size.width>900 && size.width <1060 ? 6: 4 ,overflow: TextOverflow.ellipsis,),
-        const Spacer(),
-        ProjectLinks(index: index,),
-        const SizedBox(height: defaultPadding/2,),
-      ],
+    var project = projectList[index];
+    var size = MediaQuery.sizeOf(context);
+
+    return Container(
+      padding: const EdgeInsets.all(defaultPadding),
+      decoration: BoxDecoration(
+        color: secondaryColor,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 6,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // 📸 Project Image
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.asset(
+                project.image,
+                width: double.infinity,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            ),
+        
+            const SizedBox(height: defaultPadding / 1.5),
+        
+            // 📌 Project Name
+            Text(
+              project.name,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: const Color(0xFFBAD6B5),
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
+        
+            const SizedBox(height: defaultPadding / 4),
+        
+            // 📝 Project Description
+            Text(
+              project.description,
+              style: const TextStyle(
+                color: const Color(0xFFBAD6B5),
+                height: 1.4,
+              ),
+              maxLines: 4,
+              overflow: TextOverflow.ellipsis,
+            ),
+        
+            
+        
+            // 🔗 Project Link Button
+            Align(
+              alignment: Alignment.bottomRight,
+              child: ProjectLinks(index: index),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

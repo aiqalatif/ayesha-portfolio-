@@ -10,7 +10,7 @@ List<Project> projectList = [
   Project(
      'Law Consultation App',
     'This application helps users to get legal advice and consultations easily. It features lawyer listings, booking appointments, and a chat system — all built with Flutter and Firebase integration.',
-    'assets/images/lawapp.png',
+    'assets/images/lawapp.jpeg',
     'https://github.com/aiqalatif/law_app',
   ),
   Project(
